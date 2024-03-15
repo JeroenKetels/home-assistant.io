@@ -1,0 +1,34 @@
+---
+title: Update Dynamic Prices
+description: sensor platform for the Belgian Area downloads the prices from The elia, the global market prices for the current date and the next 24 hours.
+ha_category:
+  - Energy
+ha_release: 0.34
+ha_iot_class: Local Push
+ha_config_flow: false
+ha_domain: dynamic_prices
+ha_codeowners:
+  - '@JeroenKetels'
+ha_platforms:
+  - sensor
+ha_integration_type: hub
+---
+
+A sensor platform for Belgian Area.
+
+### Configuration
+
+add this to configuration.yaml
+
+```yaml
+  sensor:
+  - platform: dynamic_prices
+```    
+### Options
+
+#### Time between updates
+Every day the values are downloaded from the elias platform.
+    
+<div class='note'>
+  every 10 seconds the values are updated internally
+</div>
